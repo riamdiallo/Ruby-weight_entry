@@ -1,0 +1,27 @@
+<h1>Modifier les informations</h1>
+
+<%= form_with(model: @weight_entry, local: true) do |form| %>
+    <% if @weight_entry.errors.any? %>
+        <div>
+            <h2>Erreur(s) de validation</h2>
+            <ul>
+                <% @weight_entry.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>    
+            </ul>
+        </div>   
+    <% end %>    
+
+    <div class="field">
+        <%= form.label :date %>
+        <%= form.date_field :date %>
+    </div>
+
+    
+    <div class="field">
+        <%= form.label :weight %>
+        <%= form.number_field :weight %>
+    </div>
+
+<% end %>    
+<%= link_to 'Back', weight_entries_path %>    
