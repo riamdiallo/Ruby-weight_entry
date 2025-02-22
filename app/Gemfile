@@ -62,3 +62,6 @@ gem "tailwindcss-rails", "~> 3.3"
 gem "chartkick"
 
 gem "devise", "~> 4.9"
+
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
